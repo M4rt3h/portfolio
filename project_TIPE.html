@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | TIPE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon-png.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Projet <i>TIPE</i></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Acceuil</a></li>
+                <li class="dropdown">
+                    <a href="projects.html">Mes projets</a>
+                    <ul class="submenu">
+                        <li><a href="projects_robotique.html">Robotique</a></li>
+                        <li><a href="projects_ia.html">Intelligence Artificielle</a></li>
+                        <li><a href="projects_electronique.html">Électronique</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="about.html">À propos</a>
+                    <ul class="submenu">
+                        <li><a href="about_etudes.html">Mes Études</a></li>
+                        <li><a href="about_parcours.html">Mon Parcours</a></li>
+                        <li><a href="about_hobbies.html">Mes Loisirs</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-me">
+            <h2>Mise en contexte</h2>
+            <p>Dans le cadre de ma classe préparatoire aux grandes écoles, j'ai dû réaliser un <i_>TIPE</i_> (Travaux d'Initiative Personnelle Encadrés). Le thème de cette année était le sport, ce qui m'a naturellement conduit à choisir un sujet lié à ma discipline : la natation.</p>
+            <p>En tant que nageur, j'ai rapidement identifié un problème récurrent : l'influence des courants sur la vitesse de nage en milieu naturel. J'ai donc décidé de travailler sur la création d'un dispositif pour mesurer la vitesse de nage en fonction des courants, un outil qui pourrait améliorer la précision des performances en extérieur.</p>
+        </section>
+    
+        <section class="about-me">
+            <h2>🧪 Problématique scientifique</h2>
+            <div class="two-columns">
+                <div class="box">
+                    <h3>Enjeu principal</h3>
+                    <p>Créer un capteur permettant de mesurer la vitesse de nage d’un athlète en milieu naturel en tenant compte des courants marins.</p>
+                    <div class="image-placeholder">
+                        <img src="images/tipe-fig1.jpg" alt="Schéma du couloir de nage avec courant" class="schema">
+                        <p class="caption">Figure 1 - Couloir de nage en eau libre</p>
+                    </div>
+                </div>
+                
+                <div class="box">
+                    <h3>Contraintes techniques</h3>
+                    <ul>
+                        <li>Étanche</li>
+                        <li>Grande autonomie</li>
+                        <li>Précis</li>
+                        <li>Résistance aux vagues</li>
+                    </ul>
+                    <div class="image-placeholder">
+                        <img src="images/tipe-fig2.png" alt="Diagramme des contraintes techniques" class="schema">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-me">
+            <h2>🔍 Méthodologie de mesure</h2>
+            <div class="two-columns">
+                <div class="box">
+                    <h3>Capteurs testés</h3>
+                    <ul>
+                        <li>Électromagnétique</li>
+                        <li>À moulinet</li>
+                        <li>Tube de Pitot</li>
+                    </ul>
+                    <div class="image-placeholder">
+                        <img src="images/tipe-fig3.png" alt="Comparaison des courantomètres" class="schema">
+                        <p class="caption">Figure 2 - Technologies de mesure comparées</p>
+                    </div>
+                </div>
+                
+                <div class="box">
+                    <h3>Principe du tube Pitot</h3>
+                    <p>Équation fondamentale :</p>
+                    <pre>½ρv² + P + ρgh = constante</pre>
+                    <div class="image-placeholder">
+                        <img src="images/tipe-fig4.png" alt="Schéma de principe du tube Pitot" class="schema">
+                        <p class="caption">Figure 3 - Fonctionnement du capteur Pitot</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-me">
+            <h2>📊 Résultats expérimentaux</h2>
+            <div class="two-columns">
+                <div class="box">
+                    <h3>Calibration pompe/capteur</h3>
+                    <div class="image-placeholder">
+                        <img src="images/tipe-graph1.png" alt="Courbe de calibration tension/vitesse" class="graph">
+                        <p class="caption">Figure 4 - Relation tension/vitesse (15V)</p>
+                    </div>
+                    <p>Précision obtenue : ±0.05 m/s</p>
+                </div>
+                
+                <div class="box">
+                    <h3>Traitement du signal</h3>
+                    <pre><code>def filtrage_moy(yB,M):
+    yF = np.copy(yB)
+    m = M//2
+    for i in range(M//2, len(x)-M//2):
+        yF[i] = np.sum(yB[i-m:i+m])/M
+    return yF</code></pre>
+                    <div class="image-placeholder">
+                        <img src="images/tipe-graph2.png" alt="Filtrage moyenne glissante" class="graph">
+                        <p class="caption">Figure 5 - Filtrage des données brutes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-me">
+            <h2>⚙️ Architecture technique</h2>
+            <div class="two-columns">
+                <div class="box">
+                    <h3>Stack matérielle</h3>
+                    <ul>
+                        <li>Capteur MPRLS (0-25 PSI)</li>
+                        <li>Multiplexeur TCA9548A</li>
+                        <li>Arduino UNO R3</li>
+                        <li>Batterie LiPo 5000mAh</li>
+                    </ul>
+                    <div class="image-placeholder">
+                        <img src="images/tipe-fig5.jpg" alt="Montage électronique complet" class="schema">
+                        <p class="caption">Figure 6 - Maquette finale</p>
+                    </div>
+                </div>
+                
+                <div class="box">
+                    <h3>Performances</h3>
+                    <table class="performance-table">
+                        <tr>
+                            <th>Paramètre</th>
+                            <th>Valeur</th>
+                        </tr>
+                        <tr>
+                            <td>Précision</td>
+                            <td>0.12 m/s</td>
+                        </tr>
+                        <tr>
+                            <td>Latence</td>
+                            <td>85 ms</td>
+                        </tr>
+                        <tr>
+                            <td>Autonomie</td>
+                            <td>9h30</td>
+                        </tr>
+                    </table>
+                    <div class="image-placeholder">
+                        <img src="images/tipe-fig6.jpg" alt="Test en bassin de nage" class="schema">
+                        <p class="caption">Figure 7 - Validation en conditions réelles</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sections existantes conservées -->
+
+    </main>
+
+    <footer>
+        <p>© 2025 - Créé avec ❤️</p>
+    </footer>
+</body>
+</html>

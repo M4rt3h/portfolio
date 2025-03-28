@@ -17,10 +17,27 @@ header {
     flex-direction: column;
     align-items: center;
 }
+.two-columns {
+    display: flex;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.two-columns .box {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
 
 i { /* Pour mettre le morceau important du titre en italique manuscrit */
     font-family: 'Dancing Script', cursive;
     font-size: 2em;
+}
+
+i_ { /* Pour mettre le morceau important du titre en italique manuscrit */
+    font-family: 'Dancing Script', cursive;
 }
 
 h1 {
@@ -142,4 +159,57 @@ section {
     padding: 15px;
     margin: 15px 0;
     border-radius: 8px;
+}
+
+
+/* Nouveaux styles */
+.image-placeholder {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.schema {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.graph {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+}
+
+.caption {
+    font-size: 0.9em;
+    color: #87BBA2;
+    margin-top: 8px;
+}
+
+pre {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.performance-table {
+    width: 100%;
+    margin: 15px 0;
+    border-collapse: collapse;
+}
+
+.performance-table th,
+.performance-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #55828B;
 }
