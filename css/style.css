@@ -15,6 +15,11 @@ header {
     padding: 20px;
 }
 
+i { /* Pour mettre le morceau important du titre en italique manuscrit */
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+}
+
 h1 {
     margin: 0;
     font-size: 2em;
