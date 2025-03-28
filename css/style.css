@@ -13,6 +13,9 @@ body {
 header {
     background-color: #3B6064;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 i { /* Pour mettre le morceau important du titre en italique manuscrit */
@@ -25,21 +28,78 @@ h1 {
     font-size: 2em;
 }
 
+nav {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    position: relative;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #87BBA2;
+    color: #C9E4CA;
+    padding: 12px 18px;
+    display: block;
     font-weight: 600;
+    transition: background 0.3s;
 }
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    min-width: 180px;
+}
+
+/* Style des éléments du sous-menu */
+.submenu li {
+    width: 100%;
+}
+.submenu li:hover {
+    background: rgba(200, 200, 200, 0.5);
+}
+
+
+/* Apparition du sous-menu au survol */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* Style des liens dans le sous-menu */
+.submenu li a {
+    padding: 10px;
+    color: #333;
+    display: block;
+}
+
+
+.submenu li a:hover {
+    background: rgba(200, 200, 200, 0.5);
+}
+
 
 .hero {
     padding: 100px 20px;
