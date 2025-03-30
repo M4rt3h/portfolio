@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages/contact.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon-png.png" type="image/x-icon">
+
+    <!-- Ajouter dans le <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
 <body>
@@ -14,21 +19,21 @@
         <h1><i>Contact</i></h1>
         <nav>
             <ul>
-                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="index.html">Accueil</a></li>
                 <li class="dropdown">
                     <a href="projects.html">Mes projets</a>
                     <ul class="submenu">
-                        <li><a href="projects_robotique.html">Robotique</a></li>
-                        <li><a href="projects_ia.html">Intelligence Artificielle</a></li>
-                        <li><a href="projects_electronique.html">Électronique</a></li>
+                        <li><a href="projects.html#etudes">Projets d'étude</a></li>
+                        <li><a href="projects.html#perso">Projets personnels</a></li>
+                        <li><a href="projects_electronique.html">A venir</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="about.html">À propos</a>
                     <ul class="submenu">
-                        <li><a href="about_etudes.html">Mes Études</a></li>
-                        <li><a href="about_parcours.html">Mon Parcours</a></li>
-                        <li><a href="about_hobbies.html">Mes Loisirs</a></li>
+                        <li><a href="about.html#parcours">Mon Parcours</a></li>
+                        <li><a href="about.html#loisirs">Mes Loisirs</a></li>
+                        <li><a href="about.html#CV">Mon CV</a></li>
                     </ul>
                 </li>
                 <li><a href="contact.html">Contact</a></li>
@@ -39,9 +44,18 @@
     <main>
         <section>
             <h2>Me contacter</h2>
-            <p>Email : <a href="mailto:martin.leteurtre@gmail.com">martin.leteurtre@gmail.com</a></p>
-            <p>LinkedIn : <a href="https://www.linkedin.com/in/martin-leteurtre-b24088217/" target="_blank">Mon profil</a></p>
-            <p>GitHub : <a href="https://github.com/m4rt3h" target="_blank">Mon GitHub</a></p>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p><a href="mailto:martin.leteurtre@gmail.com">martin.leteurtre@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <p><a href="https://www.linkedin.com/in/martin-leteurtre-b24088217/" target="_blank">Mon profil</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <p><a href="https://github.com/m4rt3h" target="_blank">Mon GitHub</a></p>
+            </div>
         </section>
     </main>
 

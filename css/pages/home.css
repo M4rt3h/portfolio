@@ -1,0 +1,9 @@
+/* home.css */
+.hero {
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    color: #C9E4CA;
+}

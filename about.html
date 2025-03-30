@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À propos</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>À propos - Martin</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="images/favicon-png.png" type="image/x-icon">
-
 </head>
 <body>
     <header>
-        <h1>À <i>propos</i></h1>
+        <h1>A <i>porpos</i></h1>
         <nav>
             <ul>
-                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="index.html">Accueil</a></li>
                 <li class="dropdown">
                     <a href="projects.html">Mes projets</a>
                     <ul class="submenu">
-                        <li><a href="projects_robotique.html">Robotique</a></li>
-                        <li><a href="projects_ia.html">Intelligence Artificielle</a></li>
-                        <li><a href="projects_electronique.html">Électronique</a></li>
+                        <li><a href="projects.html#etudes">Projets d'étude</a></li>
+                        <li><a href="projects.html#perso">Projets personnels</a></li>
+                        <li><a href="projects_electronique.html">A venir</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -37,29 +38,172 @@
     </header>
 
     <main>
-        <section>
-            <h2>Qui suis-je ?</h2>
-            <p>Étudiant passionné en robotique et intelligence artificielle, je développe des projets en Java et en plateformes autonomes.</p>
+        <!-- Section Parcours -->
+        <section id="parcours">
+            <h2><i class="fas fa-timeline"></i>Mon Parcours</h2>
+            <div class="two-columns">
+                <!-- Colonne de gauche - Parcours académique -->
+                <div class="box">
+                    <h3 class="subtitle-accent"><i class="fas fa-graduation-cap"></i> Parcours Académique</h3>
+                    <div class="timeline">
+                        <div class="timeline-item visible">
+                            <div class="timeline-icon academic">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>École d'Ingénieur en Robotique</h4>
+                                <p class="timeline-date">2024-2027 | UPSSITECH Toulouse</p>
+                                <p>Spécialisation en Systèmes Robotiques et Interactifs</p>
+                            </div>
+                        </div>
+        
+                        <div class="timeline-item visible">
+                            <div class="timeline-icon academic">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Classe Préparatoire TSI</h4>
+                                <p class="timeline-date">2022-2024 | Lycée Joliot Curie Sète</p>
+                                
+                                <p>Maths, Physique, Chimie et Sciences de l'Ingénieur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Colonne de droite - Expérience professionnelle -->
+                <div class="box">
+                    <h3 class="subtitle-accent"><i class="fas fa-briefcase"></i> Expérience Professionnelle</h3>
+                    <div class="timeline">
+                        <div class="timeline-item visible">
+                            <div class="timeline-icon pro">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Runner - Mamamouchi | Restaurant</h4>
+                                <p class="timeline-date">Été 2022 | Gruissan</p>
+                                <p>Coordination entre la cuisine et le service
+                                    en salle, gestion des demandes urgentes,
+                                    contribution à un service fluide lors des pics
+                                    d’activité</p>
+                            </div>
+                        </div>
+        
+                        <div class="timeline-item visible">
+                            <div class="timeline-icon pro">
+                                <i class="fas fa-broom"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Agent de nettoyage - Action Propreté</h4>
+                                <p class="timeline-date">Été 2020 | Narbonne</p>
+                                <p>Nettoyage d’appartements saisonniers :
+                                    gestion des stocks de produits, respect des délais
+                                    serrés, garantie de la satisfaction client par un travail
+                                    minutieux.
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section>
+                <!-- Nouvelle section Diplômes -->
+                <div class="full-width-box">
+                    <h3 class="subtitle-accent"><i class="fas fa-scroll"></i> Diplômes Obtenus</h3>
+
+
+                    <h4>Baccalauréat STI2D</h4>
+                    <p class="timeline-date">2022 | Lycée Louise Michel Narbonne</p>
+                    <span>
+                        Mention Bien - Spécialité SIN
+                    </span>
+
+                    <h4>Brevet d'Initiation Aeronautique</h4>
+                    <p class="timeline-date">2019 | Lycée Louise Michel Narbonne</p>
+                    <span>
+                        Mention Bien
+                    </span>
+                </div>
+            </section>
         </section>
 
-        <section>
-            <h2>Compétences</h2>
-            <ul>
-                <li>Programmation : Java, Python, C++</li>
-                <li>IA : Machine Learning, Deep Learning</li>
-                <li>Robotique : ROS, Arduino</li>
-            </ul>
+        <!-- Section Compétences -->
+        <section id="competences">
+            <h2><i class="fas fa-laptop-code"></i>Mes Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fab fa-python"></i> Langages</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Python <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="skill-item">C++ <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="skill-item">MATLAB <i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-robot"></i> Robotique</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">ROS2 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="skill-item">Arduino <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="skill-item">SolidWorks <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Outils</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Git/GitHub <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="skill-item">Linux <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="skill-item">Docker <i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Mon CV</h2>
-            <p><a href="ressources/CV.pdf" class="btn" download>Voir mon CV</a></p>
+        <!-- Section Loisirs -->
+        <section id="loisirs">
+            <h2><i class="fas fa-swimmer"></i> Mes Loisirs</h2>
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <i class="fas fa-water fa-2x"></i>
+                    <h3>Natation en eau libre</h3>
+                    <p>Participation à des compétitions régionales</p>
+                </div>
+
+                <div class="hobby-card">
+                    <i class="fas fa-satellite-dish fa-2x"></i>
+                    <h3>Radio-amateur</h3>
+                    <p>Construction d'antennes et communications longue distance</p>
+                </div>
+
+                <div class="hobby-card">
+                    <i class="fas fa-3d-rotate fa-2x"></i>
+                    <h3>Impression 3D</h3>
+                    <p>Création de prototypes robotiques</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section CV -->
+        <section id="CV">
+            <h2><i class="fas fa-file-pdf"></i> Mon CV</h2>
+            <p><a href="#" class="btn" download><i class="fas fa-download"></i> Télécharger (PDF)</a></p>
         </section>
     </main>
 
     <footer>
         <p>© 2025 - Créé avec ❤️</p>
     </footer>
+
+    <script>
+        // Animation au défilement
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('.timeline-item').forEach(item => {
+                if(item.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                    item.classList.add('visible');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-

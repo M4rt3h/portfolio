@@ -1,4 +1,4 @@
-/* Import Google Fonts */
+/* main.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
@@ -8,8 +8,22 @@ body {
     background-color: #364958;
     color: #C9E4CA;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+html, body {
+    height: 100%;
+}
+
+
+main {
+    flex: 1;
+}
+
+
+/* Header et navigation */
 header {
     background-color: #3B6064;
     padding: 20px;
@@ -17,33 +31,7 @@ header {
     flex-direction: column;
     align-items: center;
 }
-.two-columns {
-    display: flex;
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
 
-.two-columns .box {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-i { /* Pour mettre le morceau important du titre en italique manuscrit */
-    font-family: 'Dancing Script', cursive;
-    font-size: 2em;
-}
-
-i_ { /* Pour mettre le morceau important du titre en italique manuscrit */
-    font-family: 'Dancing Script', cursive;
-}
-
-h1 {
-    margin: 0;
-    font-size: 2em;
-}
 
 nav {
     background-color: rgba(255, 255, 255, 0.1);
@@ -95,36 +83,39 @@ nav ul li a:hover {
 .submenu li {
     width: 100%;
 }
-.submenu li:hover {
-    background: rgba(200, 200, 200, 0.5);
-}
 
-
-/* Apparition du sous-menu au survol */
-.dropdown:hover .submenu {
-    display: block;
-}
-
-/* Style des liens dans le sous-menu */
 .submenu li a {
     padding: 10px;
     color: #333;
     display: block;
 }
 
+.submenu li:hover {
+    background: rgba(200, 200, 200, 0.5);
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
 
 .submenu li a:hover {
     background: rgba(200, 200, 200, 0.5);
 }
 
 
-.hero {
-    padding: 100px 20px;
+/* Structure commune */
+.two-columns {
+    display: flex;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.hero h2 {
-    font-size: 2.5em;
-    color: #C9E4CA;
+.two-columns .box {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .btn {
@@ -144,8 +135,10 @@ nav ul li a:hover {
 footer {
     background-color: #3B6064;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: auto;
 }
+
+/* Éléments réutilisables */
 section {
     margin: 50px auto;
     padding: 20px;
@@ -154,15 +147,17 @@ section {
     border-radius: 10px;
 }
 
-.project {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 8px;
+section a:link, 
+section a:visited {
+    color: #C9E4CA;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-
-/* Nouveaux styles */
+section a:hover {
+    color: #87BBA2;
+    text-decoration: underline;
+}
 .image-placeholder {
     background: rgba(255, 255, 255, 0.05);
     padding: 15px;
@@ -170,17 +165,10 @@ section {
     margin: 15px 0;
     text-align: center;
 }
-
 .schema {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
-}
-
-.graph {
-    width: 100%;
-    max-height: 250px;
-    object-fit: contain;
 }
 
 .caption {
@@ -189,27 +177,20 @@ section {
     margin-top: 8px;
 }
 
-pre {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    border-radius: 5px;
-    overflow-x: auto;
+
+
+h1 {
+    margin: 0;
+    font-size: 2em;
 }
 
-code {
-    font-family: 'Courier New', monospace;
-    font-size: 0.9em;
+
+
+i {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
 }
 
-.performance-table {
-    width: 100%;
-    margin: 15px 0;
-    border-collapse: collapse;
-}
-
-.performance-table th,
-.performance-table td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #55828B;
+i_ {
+    font-family: 'Dancing Script', cursive;
 }

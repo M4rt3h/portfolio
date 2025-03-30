@@ -1,0 +1,14 @@
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+    justify-content: center;
+}
+
+.contact-item i {
+    font-size: 1.5em;
+    color: #87BBA2;
+    width: 30px;
+    text-align: center;
+}
