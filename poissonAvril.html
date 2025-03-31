@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module SHS - UPSSITECH</title>
+    <link rel="icon" href="https://www.upssitech.eu/wp-content/uploads/2017/03/favicon-150x150.png" sizes="32x32">
+    <style>
+        /* ---------- Reset et styles de base ---------- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+    
+        body, html {
+            height: 100%;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #f8f9fa;
+        }
+    
+        /* ---------- En-tête fixe ---------- */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem;
+            background: #2c3e50;
+            color: white;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+    
+        .logo {
+            height: 40px;
+            margin-right: 15px;
+        }
+    
+        /* ---------- Contenu principal ---------- */
+        .container {
+            margin-top: 70px;
+            margin-bottom: 50px;
+            padding: 20px;
+        }
+    
+        /* ---------- Section académique crédible ---------- */
+        .academic-section {
+            background: white;
+            padding: 4rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+        }
+    
+        .theory-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 3rem;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    
+        /* ---------- Carte théorique ---------- */
+        .theory-card {
+            background: #f1f3f5;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+    
+        .theory-intro {
+            color: #2c3e50;
+            margin: 1.5rem 0;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+    
+        .theory-list {
+            padding-left: 2rem;
+            margin: 1.5rem 0;
+        }
+    
+        .theory-list li {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            line-height: 1.5;
+            color: #34495e;
+        }
+    
+        .theory-source {
+            margin-top: 2rem;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+    
+        /* ---------- Visuel théorique ---------- */
+        .theory-visual {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 100px;
+            max-width: 90%;
+            height: fit-content;
+        }
+    
+        .theory-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+    
+        .image-caption {
+            text-align: center;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            padding: 0 1rem;
+        }
+    
+        .research-chart {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+    
+        .methodology-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+    
+        .method-card {
+            background: #f1f3f5;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+    
+        /* ---------- Transition ---------- */
+        .transition-section {
+            background: #2c3e50;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin: 3rem 0;
+            border-radius: 10px;
+        }
+    
+        /* ---------- Section révélation ---------- */
+        .prank-section {
+            background: #e3f2fd;
+            padding: 4rem 2rem;
+            border-radius: 10px;
+        }
+    
+        .galerie {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+            grid-auto-rows: auto;
+        }
+    
+        .photo-container {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: auto;
+        }
+    
+        .photo-container:hover {
+            transform: translateY(-5px);
+        }
+    
+        .photo-container img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+    
+        .photo-container[style*="grid-column"] img {
+            height: auto !important;
+            max-height: 90vh;
+        }
+    
+        .photo-legende {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            font-size: 0.9em;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60px;
+        }
+    
+        /* ---------- Animations ---------- */
+        @keyframes reveal {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    
+        .reveal-title {
+            font-size: 2.5rem;
+            color: #e74c3c;
+            margin-bottom: 3rem;
+            text-align: center;
+            animation: reveal 1s ease-out;
+        }
+    
+        /* ---------- Pied de page ---------- */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 0.8rem;
+            background: #34495e;
+            color: white;
+            text-align: center;
+            font-size: 0.9em;
+        }
+    
+        /* ========== MEDIA QUERIES ========== */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 0.5rem;
+            }
+            
+            .logo {
+                margin: 0 0 10px 0;
+            }
+    
+            .theory-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+    
+            .theory-visual {
+                position: static;
+                max-width: 100%;
+                margin-top: 2rem;
+            }
+    
+            .methodology-steps {
+                grid-template-columns: 1fr;
+            }
+    
+            .container {
+                margin-top: 60px;
+                padding: 10px;
+            }
+    
+            .academic-section,
+            .prank-section {
+                padding: 2rem 1rem;
+            }
+    
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+    
+            .reveal-title {
+                font-size: 1.8rem;
+            }
+
+            .photo-container[style*="grid-column"] img {
+                max-height: 60vh;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .galerie {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+    
+            .photo-container[style*="grid-column"] img {
+                height: auto !important;
+                max-height: 50vh;
+                object-fit: contain !important;
+                width: 100%;
+            }
+    
+            .photo-legende {
+                font-size: 0.8em;
+                padding: 0.5rem;
+            }
+    
+            .footer {
+                font-size: 0.8em;
+                padding: 0.5rem;
+            }
+    
+            @media (hover: none) {
+                body {
+                    overflow-y: auto;
+                }
+                
+                .header,
+                .footer {
+                    position: static;
+                }
+                
+                .container {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        /* Animation du texte Poisson d'avril */
+.poisson-text-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    animation: float 2s ease-in-out infinite;
+    text-shadow: 3px 3px 0 rgba(255,50,50,0.8),
+                -3px -3px 0 rgba(50,50,255,0.8);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.poisson-text-animation span {
+    animation: bounce 0.8s ease infinite alternate;
+    color: #fff;
+    text-stroke: 2px #000;
+    -webkit-text-stroke: 2px #000;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(-50%, -55%) rotate(-3deg); }
+    50% { transform: translate(-50%, -45%) rotate(3deg); }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(-20px) scale(1.2); }
+}
+
+/* Animation différente pour chaque lettre */
+.poisson-text-animation span:nth-child(1) { animation-delay: 0.1s; color: #ff0000; }
+.poisson-text-animation span:nth-child(2) { animation-delay: 0.2s; color: #ff8800; }
+.poisson-text-animation span:nth-child(3) { animation-delay: 0.3s; color: #ffff00; }
+.poisson-text-animation span:nth-child(4) { animation-delay: 0.4s; color: #00ff00; }
+.poisson-text-animation span:nth-child(5) { animation-delay: 0.5s; color: #00ffff; }
+.poisson-text-animation span:nth-child(6) { animation-delay: 0.6s; color: #0000ff; }
+.poisson-text-animation span:nth-child(7) { animation-delay: 0.7s; color: #ff00ff; }
+.poisson-text-animation span:nth-child(8) { animation-delay: 0.8s; color: #ff0088; }
+.poisson-text-animation span:nth-child(9) { animation-delay: 0.9s; color: #ff0000; }
+.poisson-text-animation span:nth-child(10) { animation-delay: 1.0s; color: #ff8800; }
+.poisson-text-animation span:nth-child(11) { animation-delay: 1.1s; color: #ffff00; }
+.poisson-text-animation span:nth-child(12) { animation-delay: 1.2s; color: #00ff00; }
+.poisson-text-animation span:nth-child(13) { animation-delay: 1.3s; color: #00ffff; }
+
+@media (max-width: 768px) {
+    .poisson-text-animation {
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 0 rgba(255,50,50,0.8),
+                    -2px -2px 0 rgba(50,50,255,0.8);
+    }
+}
+
+@media (max-width: 480px) {
+    .poisson-text-animation {
+        font-size: 1.8rem;
+        gap: 0.2rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- En-tête -->
+    <div class="header">
+        <img src="images/poissonAvril/Logo_upssitech.png" alt="Logo" class="logo">
+        <h1>SHS - Communication Appliquée</h1>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="container">
+        <!-- Partie académique sérieuse -->
+        <section class="academic-section">
+            <div class="theory-grid">
+                <div class="theory-card">
+                    <h2>Théorie de la Communication Non Violente</h2>
+                    <p class="theory-intro">La méthode développée par Marshall Rosenberg repose sur 4 principes fondamentaux :</p>
+                    <ol class="theory-list">
+                        <li>Observation sans jugement</li>
+                        <li>Expression des sentiments</li>
+                        <li>Identification des besoins</li>
+                        <li>Formulation de demandes claires</li>
+                    </ol>
+                    <div class="theory-source">
+                        <p>Source : Rosenberg, M. (1999). Nonviolent Communication: A Language of Compassion</p>
+                    </div>
+                </div>
+                <div class="theory-visual">
+                    <img src="images/poissonAvril/cnv.png" 
+                         alt="Processus CNV" 
+                         class="theory-image">
+                    <div class="image-caption">Modélisation du processus CNV</div>
+                </div>
+            </div>
+
+            <div class="research-chart">
+                <img src="images/poissonAvril/cnv2.png" 
+                     alt="Statistiques d'efficacité" 
+                     style="width: 100%; max-width: 600px; height: auto;">
+                <p style="margin-top: 1rem; color: #666;">Résultats de notre étude longitudinale (n=200)</p>
+            </div>
+
+            <div class="methodology-steps">
+                <div class="method-card">
+                    <h3>Étude Longitudinale</h3>
+                    <p>Analyse sur 3 ans de situations conflictuelles en milieu professionnel</p>
+                </div>
+                <div class="method-card">
+                    <h3>Méthodologie Mixte</h3>
+                    <p>Combinaison d'analyses qualitative et quantitative</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transition -->
+        <section class="transition-section">
+            <h2>Module Pratique</h2>
+            <p>Application concrète des concepts théoriques</p>
+        </section>
+
+        <!-- Révélation du poisson d'avril -->
+        <section class="prank-section">
+            <h2 class="reveal-title">Analyse des Comportements Étudiants</h2>
+            <div class="galerie">
+                <div class="photo-container">
+                    <img src="images/poissonAvril/ferreol1.jpg" alt="Cas pratique 1">
+                    <div class="photo-legende">Étude de cas n°1 : Attitude professionnelle</div>
+                </div>
+                <div class="photo-container">
+                    <img src="images/poissonAvril/martin1.jpg" alt="Cas pratique 2">
+                    <div class="photo-legende">Étude de cas n°2 : Comportement adequat</div>
+                </div>
+                <div class="photo-container">
+                    <img src="images/poissonAvril/ferreol2.jpg" alt="Cas pratique 1">
+                    <div class="photo-legende">Étude de cas n°1 : Communication interpersonnelle</div>
+                </div>
+                <div class="photo-container">
+                    <img src="images/poissonAvril/martin2.jpg" alt="Cas pratique 1">
+                    <div class="photo-legende">Étude de cas n°1 : Respect de l'autre</div>
+                </div>
+                <div class="photo-container" style="grid-column: 1 / -1;">
+                    <img src="images/poissonAvril/poisson.jpg" alt="Conclusion scientifique">
+                    <div class="poisson-text-animation">
+                        <span>P</span><span>O</span><span>I</span><span>S</span><span>S</span><span>O</span><span>N</span><a>.</a>
+                        <span>D</span>'
+                        <span>A</span><span>V</span><span>R</span><span>I</span><span>L</span>
+                    </div>
+                    <div class="photo-legende" style="font-size: 1.2em;">
+                        Modèle théorique validé (Poisson d'avril 2024)
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Pied de page -->
+    <div class="footer">
+        © 2025 UPSSITECH - SHS
+    </div>
+
+    <script>
+        // Défilement automatique amélioré
+        let scrollSpeed = 1;
+        let isScrolling = true;
+
+        function autoScroll() {
+            if (isScrolling) {
+                window.scrollBy(0, scrollSpeed);
+                const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+                
+                // Accélération progressive
+                if (window.scrollY > maxScroll * 0.7) {
+                    scrollSpeed = 8;
+                } else if (window.scrollY > maxScroll * 0.4) {
+                    scrollSpeed = 4;
+                }
+
+                if (window.scrollY < maxScroll) {
+                    requestAnimationFrame(autoScroll);
+                }
+            }
+        }
+
+        // Démarrage avec délai
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+                autoScroll();
+            }, 3000);
+        });
+
+        // Blocage du défilement manuel
+        window.addEventListener('scroll', (e) => {
+            if (isScrolling) {
+                window.scrollTo(0, window.pageYOffset);
+            }
+        });
+
+         // Modification pour mobile
+    window.addEventListener('touchstart', () => {
+        isScrolling = false;
+        window.removeEventListener('scroll', scrollHandler);
+    });
+
+    const scrollHandler = (e) => {
+        if (isScrolling) {
+            window.scrollTo(0, window.pageYOffset);
+        }
+    };
+
+    // Détection appareil tactile
+    if ('ontouchstart' in window) {
+        isScrolling = false;
+        scrollSpeed = 0;
+    }
+    </script>
+</body>
+</html>

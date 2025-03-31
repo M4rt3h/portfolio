@@ -128,37 +128,63 @@
         </section>
 
         <!-- Section Compétences -->
-        <section id="competences">
-            <h2><i class="fas fa-laptop-code"></i>Mes Compétences</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fab fa-python"></i> Langages</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Python <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                        <span class="skill-item">C++ <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                        <span class="skill-item">MATLAB <i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-robot"></i> Robotique</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">ROS2 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                        <span class="skill-item">Arduino <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                        <span class="skill-item">SolidWorks <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Outils</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Git/GitHub <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                        <span class="skill-item">Linux <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                        <span class="skill-item">Docker <i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- HTML (dans about.html) -->
+<section id="competences">
+    <h2><i class="fas fa-table"></i> Mes Compétences</h2>
+    
+    <div class="excel-table-container">
+                <table class="excel-table">
+                    <thead>
+                        <tr>
+                            <th class="col-category">Catégorie</th>
+                            <th class="col-skill">Compétence</th>
+                            <th class="col-level">Maîtrise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="3" class="category-cell">
+                                <i class="fab fa-python"></i> Programmation
+                            </td>
+                            <td>Python</td>
+                            <td class="level-cell">
+                                <div class="excel-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>C++</td>
+                            <td class="level-cell">
+                                <div class="excel-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>MATLAB</td>
+                            <td class="level-cell">
+                                <div class="excel-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td rowspan="2" class="category-cell">
+                                <i class="fas fa-robot"></i> Robotique
+                            </td>
+                            <td>Arduino</td>
+                            <td class="level-cell">
+                                <div class="excel-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+    </div>
+</section>
 
         <!-- Section Loisirs -->
         <section id="loisirs">
