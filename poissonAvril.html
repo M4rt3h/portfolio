@@ -395,6 +395,25 @@
         font-size: 1.8rem;
         gap: 0.2rem;
     }
+}.protected-image {
+    pointer-events: none; /* Empêche le clic droit */
+    user-select: none; /* Empêche la sélection */
+    -webkit-user-drag: none; /* Spécifique à Webkit */
+}
+
+/* Conteneur de superposition */
+.image-protection {
+    position: relative;
+}
+
+.image-protection::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
 }
     </style>
 </head>
@@ -461,19 +480,31 @@
             <h2 class="reveal-title">Analyse des Comportements Étudiants</h2>
             <div class="galerie">
                 <div class="photo-container">
-                    <img src="images/poissonAvril/ferreol1.jpg" alt="Cas pratique 1">
+                    <img src="images/poissonAvril/ferreol1.jpg" alt="Cas pratique 1" oncontextmenu="return false" 
+                    draggable="false"
+                    loading="lazy"
+                    class="protected-image">
                     <div class="photo-legende">Étude de cas n°1 : Attitude professionnelle</div>
                 </div>
                 <div class="photo-container">
-                    <img src="images/poissonAvril/martin1.jpg" alt="Cas pratique 2">
+                    <img src="images/poissonAvril/martin1.jpg" alt="Cas pratique 2" oncontextmenu="return false" 
+                    draggable="false"
+                    loading="lazy"
+                    class="protected-image">
                     <div class="photo-legende">Étude de cas n°2 : Comportement adequat</div>
                 </div>
                 <div class="photo-container">
-                    <img src="images/poissonAvril/ferreol2.jpg" alt="Cas pratique 1">
+                    <img src="images/poissonAvril/ferreol2.jpg" alt="Cas pratique 1" oncontextmenu="return false" 
+                    draggable="false"
+                    loading="lazy"
+                    class="protected-image">
                     <div class="photo-legende">Étude de cas n°1 : Communication interpersonnelle</div>
                 </div>
                 <div class="photo-container">
-                    <img src="images/poissonAvril/martin2.jpg" alt="Cas pratique 1">
+                    <img src="images/poissonAvril/martin2.jpg" alt="Cas pratique 1" oncontextmenu="return false" 
+                    draggable="false"
+                    loading="lazy"
+                    class="protected-image">
                     <div class="photo-legende">Étude de cas n°1 : Respect de l'autre</div>
                 </div>
                 <div class="photo-container" style="grid-column: 1 / -1;">
@@ -497,6 +528,17 @@
     </div>
 
     <script>
+
+        // Blocage des raccourcis clavier
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (e.key === 's' || e.key === 'S')) {
+        e.preventDefault();
+        alert('Enregistrement désactivé 😉');
+    }
+});
+
+// Désactivation du glisser-déposer
+window.ondragstart = function() { return false; };
         // Défilement automatique amélioré
         let scrollSpeed = 1;
         let isScrolling = true;
