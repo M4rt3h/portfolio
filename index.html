@@ -4,80 +4,315 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Accueil</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/favicon-png.png" type="image/x-icon">
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" href="images/favicon-png.png" sizes="32x32">
+
 </head>
 <body>
-    <header>
-        <h1>Portfolio de <i>Martin</i></h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li class="dropdown">
-                    <a href="projects.html">Mes projets</a>
-                    <ul class="submenu">
-                        <li><a href="projects.html#etudes">Projets d'étude</a></li>
-                        <li><a href="projects.html#perso">Projets personnels</a></li>
-                        <li><a href="projects_electronique.html">A venir</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="about.html">À propos</a>
-                    <ul class="submenu">
-                        <li><a href="about.html#parcours">Mon Parcours</a></li>
-                        <li><a href="about.html#loisirs">Mes Loisirs</a></li>
-                        <li><a href="about.html#CV">Mon CV</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- En-tête -->
+    <div class="header">
+        <img src="images/favicon-png.png" alt="Logo" class="logo">
+        <h1>Portfolio - Accueil</h1>
+    </div>
 
-    <main>
-        <section class="hero">
-            <h2>Étudiant en Robotique & Intelligence Artificielle</h2>
-            <p>Passionné de nouvelles technologies, j'explore les domaines de l'IA et de la robotique tout en cultivant des hobbies variés.</p>
-        </section>
-
-
-        <section class="about-me">
-            <h2>Qui suis-je ?</h2>
-            <div class="two-columns">
-                <div class="box">
-                    <h3>👨‍💻 Compétences techniques</h3>
-                    <p>Programmation : Java, Python, C++</p>
-                    <p>Robotique : ROS, Arduino</p>
-                    <p>Électronique : soudure, prototypage</p>
-                    <p>Versioning : Git / GitHub</p>
-                    <div class="image-placeholder">
-                        <img src="images/INDEX/fig1.png" alt="Schéma du couloir de nage avec courant" class="schema">
-                        <p class="caption">Figure 1 - Illustration des compétences</p>
+    <!-- Contenu principal -->
+    <div class="container">
+        <!-- Partie académique sérieuse -->
+        <section class="academic-section">
+            <div class="theory-grid">
+                <div class="theory-card">
+                    <h2>Qui suis-je ?</h2>
+                    <p class="theory-intro">Je m'appelle Martin, je suis étudiant à Upssitech en Robotique.</p>
+                    <p class="theory-intro">Passionné de nouvelles technologies, j'explore les domaines de l'IA et de la robotique tout en cultivant des hobbies variés.</p>
+                    <ol class="theory-list">
+                        <li>🏊 Natation & VTT 🚴</li>
+                        <li>🚁 Pilotage de drone</li>
+                        <li>🛥️ Permis bateau</li>
+                        <li>🛠️ Bricolage & électronique</li>
+                        <li>🎮 Jeux vidéo</li>
+                        <li>📚 Lecture</li>
+                    </ol>
+                    <div class="theory-source">
+                        <p>Et bien d'autres ...</p>
                     </div>
                 </div>
-                
-                <div class="box">
-                    <h3>🏕️ Loisirs & Expériences</h3>
-                    <ul>
-                        <p>🏊 Natation & VTT 🚴</p>
-                        <p>🚁 Pilotage de drone</p>
-                        <p>🛥️ Permis bateau</p>
-                        <p>🛠️ Bricolage & électronique</p>
+                <div class="theory-visual">
+                    <img src="images/INDEX/fig1.png" 
+                         alt="Illustration de mes hobbies" 
+                         class="theory-image">
+                    <div class="image-caption"></div>
+                </div>
+            </div>
+
+            
+        </section>
+        <section class="transition-section">
+            <h2>J'ai eu l'occasion de developper des compétences tel que :</h2>
+        </section>
+        <!-- Section Compétences existante (à compléter) -->
+        <section class="academic-section">
+            <div class="research-chart">
+                <img src="images/INDEX/fig2.jpg" 
+                     alt="Illustration de mes compétences" 
+                     style="width: 100%; max-width: 600px; height: auto;">
+                <p style="margin-top: 1rem; color: #666;"></p>
+    
+            </div>
+            <h2>Compétences Techniques</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Hard Skills</h3>
+                    <br
+                    <ul class="skill-list">
+                        <li>Programmation (C, Python, Java) <div class="skill-bar" style="width: 80%"></div></li>
+                        <li>Développement Web (HTML, CSS, JavaScript) <div class="skill-bar" style="width: 50%"></div></li>
+                        <li>Gestion de bases de données (SQL) <div class="skill-bar" style="width: 30%"></div></li>
+                        <li>Prototypage électronique (Arduino, Raspberry Pi) <div class="skill-bar" style="width: 90%"></div></li>
+                        <li>Conception assistée par ordinateur (SolidWorks, AutoCAD) <div class="skill-bar" style="width: 70%"></div></li>
+                        <li>Gestion de projet (Agile, Scrum) <div class="skill-bar" style="width: 50%"></div></li>
+                        <li>Langues (Anglais, Espagnol) <div class="skill-bar" style="width: 75%"></div></li>
+                        <li>Réseaux et systèmes (Linux, Windows) <div class="skill-bar" style="width: 70%"></div></li>
+                        <li>Analyse de données (Pandas, NumPy) <div class="skill-bar" style="width: 30%"></div></li>
+                        <li>Visualisation de données (Matplotlib, Tableau) <div class="skill-bar" style="width: 55%"></div></li>
+
                     </ul>
-                    <div class="image-placeholder">
-                        <img src="images/INDEX/fig2.png" alt="Diagramme des contraintes techniques" class="schema">
-                        <p class="caption">Figure 2 - Illustration des loisirs</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul class="skill-list">
+                        <br>
+                        <li>Gestion de projet</li>
+                        <li>Communication technique</li>
+                        <li>Travail en équipe</li>
+                        <li>Résolution de problèmes</li>
+                        <li>Créativité</li>
+                        <li>Adaptabilité</li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="transition-section">
+            <h2>Un parcours</h2>
+            <p>scolaire et professionnel</p>
+        </section>
+
+        <!-- Section Parcours -->
+        <section class="academic-section">
+            <h2>Mon Parcours</h2>
+            <div class="parcours-grid">
+                <!-- Colonne de gauche - Académique -->
+                <div class="parcours-column">
+                    <h3>Parcours Académique</h3>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024-2027</div>
+                        <h4>UPSSITECH - Ecole d'ingenieur</h4>
+                        <h5>Toulouse</h5>
+                        <p class="experience-list">Spécialisation en Intelligence Artificielle et robotique</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022-2024</div>
+                        <h4>Classe Préparatoire aux Grandes Écoles</h4>
+                        <h5>Sète</h5>
+                        <p class="experience-list">Spécialisation technologie et sciences industrielles</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2018-2022</div>
+                        <h4>Baccalauréat | Bien</h4>
+                        <h5>Narbonne</h5>
+                        <p class="experience-list">Spécialisation sciences et technologies de l'industrie et du développement durable</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019</div>
+                        <h4>Brevet d'Initiation à l'Aéronautoque | Bien</h4>
+                        <h5>Narbonne</h5>
+                    </div>
+                </div>
+
+                <!-- Colonne de droite - Professionnel -->
+                <div class="parcours-column">
+                    <h3>Parcours Professionnel</h3>
+                    <div class="timeline-item">
+                        <div class="timeline-date">été 2022</div>
+                        <h4>Mamamouchi - Restaurant</h4>
+                        <p>Serveur</p>
+                        <h5>Gruissan</h5>
+                        <ul class="experience-list">
+                            <p> coordination entre la cuisine et le service
+                                en salle, gestion des demandes urgentes,
+                                contribution à un service fluide lors des pics
+                                d’activité</p>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">été 2020</div>
+                        <h4>Action propreté</h4>
+                        <p>Agent d'entretien</p>
+                        <h5>Narbonne</h5>
+                        <ul class="experience-list">
+                            <p> nettoyage de locaux, gestion des déchets,
+                                respect des normes d’hygiène et de sécurité,
+                                travail en équipe</p>
+                        </ul>
                     </div>
                 </div>
             </div>
-            
+        </section>
+      
+        <!-- Transition -->
+        <section class="transition-section">
+            <h2>Mes engagements</h2>
+            <p></p>
         </section>
 
-    </main>
+        <section class="prank-section">
+            <div class="galerie">
+                <div class="photo-container">
+                    <img src="images/INDEX/youpssitech.jpg" alt="BDE Upssitech" oncontextmenu="return false" 
+                    draggable="false"
+                    loading="lazy"
+                    class="protected-image">
+                    <div class="photo-legende">Membre du Bureau des Élèves de mon école</div>
+                </div>
+                <div class="photo-container">
+                    <img src="images/INDEX/soutiens.png" alt="Illustration aide scolaire" oncontextmenu="return false" 
+                    draggable="false"
+                    loading="lazy"
+                    class="protected-image">
+                    <div class="photo-legende">Référrant d'un étudiant dans le cadre de ma CPGE</div>
+                </div>
+                <div class="photo-container">
+                    <img src="images/INDEX/reparations.jpg" alt="Cas pratique 1" oncontextmenu="return false" 
+                    draggable="false"
+                    loading="lazy"
+                    class="protected-image">
+                    <div class="photo-legende">Réparer mes appareils pour lutter contre l'obsolescence programmée</div>
+                </div>
+                <div class="photo-container">
+                    <img src="images/INDEX/velo.jpg" alt="Cas pratique 1" oncontextmenu="return false" 
+                    draggable="false"
+                    loading="lazy"
+                    class="protected-image">
+                    <div class="photo-legende">Privilégier les déplacement peu polluant</div>
+                </div>
 
-    <footer>
-        <p>© 2025 - Créé avec ❤️</p>
-    </footer>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Pied de page -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="mailto:martin.leteurtre@gmail.com" title="Email">
+                    <img src="images/INDEX/mail.png" alt="Email" class="social-icon">
+                </a>
+                <a href="https://github.com/M4rt3h" target="_blank" title="GitHub">
+                    <img src="images/INDEX/github.png" alt="GitHub" class="social-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/martin-leteurtre-b24088217/" target="_blank" title="LinkedIn">
+                    <img src="images/INDEX/linkedin.png" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="ressources/CV.pdf" title="Mon CV" target="_blank">
+                    <img src="images/INDEX/cv.png" alt="Email" class="social-icon">
+                </a>
+            </div>
+            <div class="copyright">© 2025 UPSSITECH - SHS</div>
+        </div>
+    </div>
+
+    <script>
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    document.querySelectorAll('.photo-container').forEach(container => {
+        const protector = document.createElement('div');
+        protector.className = 'mobile-protection';
+        protector.ontouchstart = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            alert('Interaction bloquée sur mobile !');
+            return false;
+        };
+        container.prepend(protector);
+    });
+
+    // Blocage du zoom tactile
+    document.addEventListener('touchmove', function(e) {
+        if(e.scale !== 1) e.preventDefault();
+    }, { passive: false });
+
+    // Désactivation du menu contextuel tactile
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+    }, { capture: true });
+}
+
+        // Blocage des raccourcis clavier
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (e.key === 's' || e.key === 'S')) {
+        e.preventDefault();
+        alert('Enregistrement désactivé !');
+    }
+});
+
+// Désactivation du glisser-déposer
+window.ondragstart = function() { return false; };
+        // Défilement automatique amélioré
+        let scrollSpeed = 1;
+        let isScrolling = true;
+
+        function autoScroll() {
+            if (isScrolling) {
+                window.scrollBy(0, scrollSpeed);
+                const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+                
+                // Accélération progressive
+                if (window.scrollY > maxScroll * 0.7) {
+                    scrollSpeed = 8;
+                } else if (window.scrollY > maxScroll * 0.4) {
+                    scrollSpeed = 4;
+                }
+
+                if (window.scrollY < maxScroll) {
+                    requestAnimationFrame(autoScroll);
+                }
+            }
+        }
+
+        // Démarrage avec délai
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+                autoScroll();
+            }, 3000);
+        });
+
+        // Blocage du défilement manuel
+        window.addEventListener('scroll', (e) => {
+            if (isScrolling) {
+                window.scrollTo(0, window.pageYOffset);
+            }
+        });
+
+         // Modification pour mobile
+    window.addEventListener('touchstart', () => {
+        isScrolling = false;
+        window.removeEventListener('scroll', scrollHandler);
+    });
+
+    const scrollHandler = (e) => {
+        if (isScrolling) {
+            window.scrollTo(0, window.pageYOffset);
+        }
+    };
+
+    // Détection appareil tactile
+    if ('ontouchstart' in window) {
+        isScrolling = false;
+        scrollSpeed = 0;
+    }
+    </script>
 </body>
 </html>

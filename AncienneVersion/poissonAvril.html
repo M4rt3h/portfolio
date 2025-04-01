@@ -415,6 +415,27 @@
     height: 100%;
     z-index: 2;
 }
+.photo-container {
+        -webkit-touch-callout: none !important;
+        touch-action: none !important;
+        user-select: none !important;
+    }
+
+    /* Surcouche de protection mobile */
+    .mobile-protection {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        background: transparent;
+        pointer-events: all !important;
+    }
+
+    @media (hover: hover) {
+        .mobile-protection { display: none !important; }
+    }
     </style>
 </head>
 <body>
@@ -515,7 +536,7 @@
                         <span>A</span><span>V</span><span>R</span><span>I</span><span>L</span>
                     </div>
                     <div class="photo-legende" style="font-size: 1.2em;">
-                        Modèle théorique validé (Poisson d'avril 2024)
+                        Modèle théorique validé (Poisson d'avril 2025)
                     </div>
                 </div>
             </div>
@@ -528,6 +549,30 @@
     </div>
 
     <script>
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    document.querySelectorAll('.photo-container').forEach(container => {
+        const protector = document.createElement('div');
+        protector.className = 'mobile-protection';
+        protector.ontouchstart = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            alert('Interaction bloquée 😉');
+            return false;
+        };
+        container.prepend(protector);
+    });
+
+    // Blocage du zoom tactile
+    document.addEventListener('touchmove', function(e) {
+        if(e.scale !== 1) e.preventDefault();
+    }, { passive: false });
+
+    // Désactivation du menu contextuel tactile
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+    }, { capture: true });
+}
 
         // Blocage des raccourcis clavier
 document.addEventListener('keydown', function(e) {
