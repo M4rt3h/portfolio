@@ -528,6 +528,37 @@ footer-content {
     padding-bottom: 1rem;
     border-bottom: 2px solid #e74c3c;
 }
+.professional-link {
+    color: #000000; /* Noir */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.professional-link:hover {
+    color: black; /* Rouge/Orange au survol - modifiable */
+}
+
+/* Empêche le changement de couleur après visite */
+.professional-link:visited {
+    color: #000000; /* Reste noir après visite */
+}
+
+/* Option : effet de soulignement animé au survol */
+.professional-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #e74c3c;
+    transition: width 0.3s ease;
+}
+
+.professional-link:hover::after {
+    width: 100%;
+}
 
 .timeline-item {
     margin-bottom: 2rem;
