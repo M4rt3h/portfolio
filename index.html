@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-08WS4T2ZD7"></script>
         <script>
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-WZ526TBH');
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-08WS4T2ZD7');
         </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +26,9 @@
         <div class="header">
             <img src="images/favicon-png.png" alt="Logo" class="logo">
             <h1>Portfolio - Accueil</h1>
+            <button class="lang-switch" onclick="window.location.href='index_en.html'">
+                🇬🇧 English
+            </button>
         </div>
 
         <!-- Contenu principal -->
@@ -34,23 +38,23 @@
                 <div class="theory-grid">
                     <div class="theory-card">
                         <h2>Qui suis-je ?</h2>
-                        <p class="theory-intro">Je m'appelle Martin, je suis étudiant à Upssitech en Robotique.</p>
+                        <p class="theory-intro">Je m'appelle Martin, je suis étudiant à <a href="https://www.upssitech.eu/formation/departement-systemes-robotiques-interactifs-sri" target="_blank" class="professional-link">Upssitech</a> en Robotique et Intelligence Artificielle.</p>
                         <p class="theory-intro">Passionné de nouvelles technologies, j'explore les domaines de l'IA et de la robotique tout en cultivant des hobbies variés.</p>
                         <ol class="theory-list">
                             <li>🏊 Natation & VTT 🚴</li>
                             <li>🚁 Pilotage de drone</li>
-                            <li>🛥️ Permis bateau</li>
-                            <li>🛠️ Bricolage & électronique</li>
-                            <li>🎮 Jeux vidéo</li>
-                            <li>📚 Lecture</li>
+                            <li>💻 Informatique et programmation</li>
+                            <li>🛠️ Rétro-ingénierie et électronique DIY</li>
+                            <li>🚗 Robotique et systèmes embarqués</li>
+                            <li>📚 Lecture et exploration scientifique</li>
                         </ol>
                         <div class="theory-source">
                             <p>Et bien d'autres ...</p>
                         </div>
                     </div>
                     <div class="theory-visual">
-                        <img src="images/INDEX/fig1.png" 
-                            alt="Illustration de mes hobbies" 
+                        <img src="images/INDEX/fig1.jpg" 
+                            alt="Illustration of my hobbies" 
                             class="theory-image">
                         <div class="image-caption"></div>
                     </div>
@@ -63,28 +67,24 @@
             </section>
             <!-- Section Compétences existante (à compléter) -->
             <section class="academic-section">
-                <div class="research-chart">
-                    <img src="images/INDEX/fig2.jpg" 
-                        alt="Illustration de mes compétences" 
-                        style="width: 100%; max-width: 600px; height: auto;">
-                    <p style="margin-top: 1rem; color: #666;"></p>
-        
-                </div>
                 <div class="skills-grid">
                     <div class="skill-category">
                         <h2>Hard Skills</h2>
                         <br
                         <ul class="skill-list">
-                            <li>Programmation (C, Python, Java) <div class="skill-bar" style="width: 80%"></div></li>
-                            <li>Développement Web (HTML, CSS, JavaScript) <div class="skill-bar" style="width: 50%"></div></li>
-                            <li>Gestion de bases de données (SQL) <div class="skill-bar" style="width: 30%"></div></li>
-                            <li>Prototypage électronique (Arduino, Raspberry Pi) <div class="skill-bar" style="width: 90%"></div></li>
-                            <li>Conception assistée par ordinateur (SolidWorks, AutoCAD) <div class="skill-bar" style="width: 70%"></div></li>
-                            <li>Gestion de projet (Agile, Scrum) <div class="skill-bar" style="width: 50%"></div></li>
-                            <li>Langues (Anglais, Espagnol) <div class="skill-bar" style="width: 75%"></div></li>
-                            <li>Réseaux et systèmes (Linux, Windows) <div class="skill-bar" style="width: 70%"></div></li>
-                            <li>Analyse de données (Pandas, NumPy) <div class="skill-bar" style="width: 30%"></div></li>
-                            <li>Visualisation de données (Matplotlib, Tableau) <div class="skill-bar" style="width: 55%"></div></li>
+                            <li>Langages de programmation : C, C++, Python, Java <div class="skill-bar" style="width: 80%"></div></li>
+                            <li>Développement web : HTML, CSS, JavaScript <div class="skill-bar" style="width: 50%"></div></li>
+                            <li>Systèmes embarqués et électronique : Arduino, Raspberry Pi, Électronique <div class="skill-bar" style="width: 90%"></div></li>
+                            <li>Gestion de bases de données : SQL <div class="skill-bar" style="width: 30%"></div></li>
+                            <li>Conception assistée par ordinateur (CAO) : SolidWorks, AutoCAD <div class="skill-bar" style="width: 70%"></div></li>
+                            <li>Modélisation et simulation : Matlab, UML <div class="skill-bar" style="width: 50%"></div></li><li>Conception assistée par ordinateur (CAO) : SolidWorks, AutoCAD <div class="skill-bar" style="width: 70%"></div></li>
+                            <li>Traitement du signal et de l'image <div class="skill-bar" style="width: 50%"></div></li>
+                            <li>Analyse de données : Pandas, NumPy <div class="skill-bar" style="width: 30%"></div></li>
+                            <li>Visualisation de données : Matplotlib, Tableau <div class="skill-bar" style="width: 55%"></div></li>
+                            <li>Outils de gestion de projet : Agile, Scrum <div class="skill-bar" style="width: 50%"></div></li>
+                            <li>Contrôle de version et collaboration : Git, GitHub, Unix, Linux <div class="skill-bar" style="width: 85%"></div></li>
+                            <li>Systèmes de contrôle et d'automatisation <div class="skill-bar" style="width: 70%"></div></li>
+                            <li>Langues : Anglais, Espagnol <div class="skill-bar" style="width: 85%"></div></li>
 
                         </ul>
                     </div>
@@ -92,13 +92,12 @@
                         <h2>Soft Skills</h2>
                         <ul class="skill-list">
                             <br>
-                            <li>Gestion de projet</li>
-                            <li>Communication technique</li>
-                            <li>Travail en équipe</li>
-                            <li>Résolution de problèmes</li>
-                            <li>Créativité</li>
-                            <li>Adaptabilité</li>
-
+                            <li>Esprit d'équipe et collaboration</li>
+                            <li>Organisation et fiabilité</li>
+                            <li>Autonomie et proactivité</li>
+                            <li>Adaptabilité et résistance au stress</li>
+                            <li>Communication efficace</li>
+                            <li>Curiosité et esprit d'analyse</li>
                         </ul>
                     </div>
                 </div>
@@ -140,7 +139,7 @@
                         <div class="timeline-item">
                             <div class="timeline-date">2019</div>
                             <h4><a href="https://louise-michel-narbonne.mon-ent-occitanie.fr" target="_blank" class="professional-link">Lycée Louise Michel</a></h4>
-                            <h4>Brevet d'Initiation à l'Aéronautoque - Bien</h4>
+                            <h4>Brevet d'Initiation à l'Aéronautique - Bien</h4>
                             <h5>Narbonne</h5>
                             <p class="experience-list">Diplôme aéronautique français combinant théorie et initiation au pilotage</p>
 
@@ -150,6 +149,14 @@
                     <!-- Colonne de droite - Professionnel -->
                     <div class="parcours-column">
                         <h3>Parcours Professionnel</h3>
+                        <div class="timeline-item">
+                            <div class="timeline-date">été 2025</div>
+                            <h4><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi8x86LjZeQAxX3T6QEHavCB1kQFnoECB4QAQ&url=https%3A%2F%2Fwww.facebook.com%2Fp%2FOlmos-melons-100054404534712%2F%3Flocale%3Dfr_FR&usg=AOvVaw25H-JrE5kqjl3krYRXnUqx&opi=89978449" target="_blank" class="professional-link">Olmos - Producteur</a></h4>                        <p>Ouvrier agricole</p>
+                            <h5>Vinassan</h5>
+                            <ul class="experience-list">
+                                <p>Ramassage et transport des melons, pastèques et courgettes, gestion du rythme de travail en plein air.</p>
+                            </ul>
+                        </div>
                         <div class="timeline-item">
                             <div class="timeline-date">été 2022</div>
                             <h4><a href="https://eo-family.com/mamamouchi/" target="_blank" class="professional-link">Mamamouchi - Restaurant</a></h4>                        <p>Serveur</p>
@@ -195,6 +202,7 @@
                         data-description="Durant ma première année de CPGE TSI, j'ai mené un projet autonome visant à mesurer la vitesse de nage en eau libre relative à l'eau, dans un milieu non statique. Mon objectif était de concevoir un système fiable, étanche et hydrodynamique, capable de fonctionner de manière autonome pendant au moins 8 heures, en m'inspirant des besoins d'un nageur comme Florent Manaudou. J'ai choisi le crawl comme nage de référence pour ses caractéristiques techniques et sa popularité.<br><br>Pour y parvenir, j'ai exploré différentes méthodes de mesure, notamment des courantomètres électromagnétiques, à hélices et à tube de Pitot. J'ai réalisé des expérimentations dans un bassin à courant artificiel, calibré des capteurs de pression et utilisé une carte Arduino pour traiter les données. J'ai également implémenté un filtre à moyenne glissante pour améliorer la précision des mesures, réduisant l'erreur à seulement 0,142%. Mon montage final intégrait un débitmètre et des capteurs MPRLS, validant ainsi la faisabilité du système. Ce projet m'a permis d'acquérir des compétences en instrumentation, traitement du signal et gestion de projet, tout en relevant des défis techniques comme la gestion de la tension superficielle dans les tubes Pitot.">
                     
                         <h3>Projet de fin de prépa</h3>
+                        <br
                         <p>Conception d'un appareil de mesure de vitesse de nage</p>
                         <div class="tech-stack">
                             <span class="tech-tag">Python</span>
@@ -210,7 +218,7 @@
                     data-images="images/INDEX/Projets/Casque/pixmi.jpg,images/INDEX/Projets/Casque/casque.jpg"
                         data-description="J’ai transformé un casque anti-bruit de chantier en un casque audio Bluetooth personnalisé en recyclant des composants électroniques. À partir d’une enceinte Bluetooth Pixmi à bas coût (défectueuse mais fonctionnelle), j’ai extrait la carte mère et la batterie, puis j’ai remplacé son haut-parleur d’origine par deux écouteurs récupérés en déchetterie, montés en mono par souci de simplicité.<br><br>Pour améliorer l’ergonomie, j’ai soudé des boutons de commande supplémentaires sur la carte électronique, permettant de gérer le volume et l’alimentation depuis l’extérieur du casque. J’ai aussi ajouté un port USB rallongé pour la recharge sans démontage. Les câbles ont été intégrés discrètement le long de l’arceau, et les trous pour les boutons ont été percés au fer à souder pour un montage propre. Un projet modeste mais formateur en bricolage électronique !">
                         <h3>Modification d'un casque antibruit</h3>
-                        <p>Désassemblage d'une enceinte bluetooth pour créer un casque anti bruit bluetooth</p>
+                        <p>Désassemblage d'une enceinte bluetooth pour créer un casque anti bruit connecté</p>
                         <div class="tech-stack">
                             <span class="tech-tag">Soudure</span>
                             <span class="tech-tag">Modélisation 3D</span>
@@ -219,16 +227,33 @@
                     </div>
 
                     <div class="project-card"
-                    data-images="images/INDEX/Projets/PFR/plateforme.jpg,images/INDEX/Projets/PFR/fig2.png"
+                    data-images="images/INDEX/Projets/PFR/plateforme.jpg,images/INDEX/Projets/PFR/traitement-image.jpg"
                         data-description="En première année d'école d'ingenieur, j'ai participé à un projet de robotique mobile en groupe. Lors de la première phase (PFR1), nous avons développé en C/Python des modules de traitement vocal et de vision par ordinateur pour piloter un robot, alors simulé. La seconde phase (PFR2) a consisté à intégrer ces briques sur une plateforme physique, en ajoutant des fonctionnalités comme l'évitement d'obstacles et la cartographie.<br><br>Ce projet m'a permis d'acquérir des compétences en programmation système, gestion de projet et travail d'équipe. Les défis principaux étaient la modularité du code et la synchronisation entre les parties logicielles et matérielles. Une expérience enrichissante, notamment sur l'interaction homme-machine et la robotique autonome.">
                     
-                        <h3>Projet fil rouge</h3>
+                        <h3>Smart Car</h3>
                         <p>Conception en equipe de 6 d'une plateforme mobile autonome</p>
                         <div class="tech-stack">
                             <span class="tech-tag">Arduino</span>
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">C/C++</span>
                             <span class="tech-tag">Organisation hardware</span>
+
+                        </div>
+                    </div>
+
+                    <div class="project-card"
+                    data-images="images/INDEX/Projets/TER/TER1.png,images/INDEX/Projets/TER/TER2.jpg"
+                        data-description="Lors de ma deuxième année à l'école d'ingénieur, mon groupe et moi avons collaboré avec Neusta France, un groupe industriel, sur un projet de flotte de robots autonomes. Nous avons d'abord analysé les besoins de l'industriel pour établir le cahier des charges, puis avons développé, en C++ et Python, des modules pour la localisation, la communication et la vision par ordinateur, afin de piloter un robot. Nos différentes solutions ont été testées sur la plateforme Gazebo. Tout au long du projet, nous avons régulièrement fait le point sur nos avancées à travers des documents hebdomadaires et des réunions de suivi.">
+                    
+                        <h3>EcoPath+</h3>
+                        <p>Collaboration avec une équipe industrielle en groupe pour le developpement d'une flotte de robot mobile autonome</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Arduino</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">C/C++</span>
+                            <span class="tech-tag">Organisation hardware</span>
+                            <span class="tech-tag">Modélisation 3D</span>
+                            <span class="tech-tag">UnrealEngine/Gazebo</span>
 
                         </div>
                     </div>
